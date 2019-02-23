@@ -1,0 +1,203 @@
+body{
+    /* background: url("images/bg5.jpg") no-repeat -1150px -1000px; */
+    
+ 
+    background-image: url("images/bg5.jpg"); 
+     background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    position: relative;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+   
+   
+   
+}
+h1 span::after
+{
+    content: "";
+    animation: HeadToggle 4s linear  infinite ;
+}
+@keyframes HeadToggle
+{
+    0%
+    {
+        content: 'Love '; 
+        text-shadow: 0 0 3px #0000FF; 
+        transition: 4s ease-in-out;
+    }
+    50%
+    {
+        content: 'FLAMES';  
+        text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        transition: 3s ease-in-out;
+    }
+    100%
+    {
+        content:'Calculator';
+        color: cadetblue;
+  text-shadow: 2px 2px 4px #000000;
+        transition: 3s ease-in-out;
+    }
+}
+/* h1:hover span {display:none}
+h1:hover::before
+{
+  content: 'FLAMES'; 
+} */
+.form-control
+{
+    width: 40%;
+    background-color: black;
+   
+    color: rgb(14, 17, 17);
+    text-shadow: 1px 1px rgb(75, 185, 248);
+}
+.page{
+    /* width:800px; */
+   margin:2%;
+  
+   /* border: 1px inset rgb(19, 23, 26);
+   box-shadow: 2px 2px 2px rgb(8, 14, 17); */
+   /* margin-top:50px;  */
+   /* margin-left: 20%; */
+}
+.ads
+{
+    height: 20%;
+    text-align: center;
+    border: 0.5px inset gainsboro;
+    margin:  1% 0;
+    width: auto;
+    visibility: hidden;
+    display: none;
+}
+.ads i
+{
+    color: black;
+  
+}
+.content
+{
+    /* width:800px; */
+    /* margin-left: 20%; */
+    /* margin:0 50px; */
+}
+.content1
+{
+    /* width:800px; */
+    /* margin-left: 20%; */
+    text-align: center;
+   
+
+color: rgb(17, 250, 250);
+text-shadow: 1px 1px rgb(15, 22, 26);
+
+    /* visibility: hidden;box-shadow: 10px 10px 5px rgb(10, 7, 7); */
+}
+.content1 span, .content1 i{
+padding-top: 20px;
+margin: 10px;
+
+}
+
+.content1show
+{
+    visibility: visible;
+    transition: 3s linear ease-in-out;
+}
+.content2
+{
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.content3 
+{
+    text-align: center;
+    font-size: 30px;
+   vertical-align: sub;
+   /* left:29%;
+   top:57%; */
+   /* animation: jump1 3s normal ease-in; */
+   color: rgb(255, 5, 5);
+    
+}
+.content2 button:first-child
+{
+left: 35%;
+}
+.select
+{
+    background-color: rgba(112, 245, 250, 0.836);
+    text-decoration-line: underline;
+    transition: 2s ease-in;
+}
+.cross
+{
+    background-color: rgb(250, 67, 67);
+    visibility: hidden; 
+     opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  
+}
+.visible {
+    visibility: visible;
+    opacity: 2;
+    transition: opacity 2s linear;
+  }
+  .hidden {
+    display: none;
+    
+    opacity: 0;
+  }
+  @media (max-width:768px)
+  {
+    .content1 span ,.content1 i
+    {
+    display: block;
+    margin: 0;
+    padding: 2px;
+    }
+
+  }
+/* @keyframes jump1
+{
+    0%{
+        left:180px;
+        top:55%;}
+    20%{
+        left:194.25px;
+        top:52%;
+    }    
+    50%{
+        
+        left:208.5px;
+        top:50%;
+    }   
+    75%{
+        left:227.75px;
+        top:51%;
+    } 
+    100%{
+        left:238px;
+        top:50%;}
+}
+@keyframes jump {
+    0% {
+        left: 0; top: 0;
+    }
+    50% {
+        left: 200px; top: -200px;
+    }
+    100% {
+        left: 400px; top: 0;
+    }
+} */

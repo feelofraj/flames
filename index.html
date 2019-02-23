@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myapp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flame</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="home.js"></script>
+  
+</head>
+
+<body ng-controller="appCon">
+  
+    <div class="page">
+            <h1><span></span></h1>
+        <div class="ads">
+            <i class="fa fa-smile-o"  aria-hidden="true"></i> 
+        </div>
+        <div>
+            <div class="content">
+               <form name="regForm"> 
+                <label for=""></label>
+                <input type="text" only-letters-input ng-model="name1" class="form-control form-control-sm" name="name1" id="name1" aria-describedby="helpId"
+                    placeholder="Your Name" ng-disabled="findClicked" required>
+                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                <label for=""></label>
+                <input type="text" only-letters-input ng-model="name2" class="form-control form-control-sm" name="name2" id="name1" aria-describedby="helpId"
+                    placeholder="Crush Name" ng-disabled="findClicked" required>
+                <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+                <label for=""></label>
+                <input class="form-control form-control-sm" type="submit" ng-click="regForm.name1.$valid && regForm.name2.$valid && calc() "  value="Find">
+            </form>
+            </div>
+            <div  class="content1" ng-show="findClicked">
+                    <!-- ng-show="content1Show" -->
+                  
+                <span class="alert ">{{name1}}</span> <i class="fa fa-heartbeat" style="font-size:24px;color:rgb(88, 255, 116)" aria-hidden="true"></i> <span class="alert">{{name2}}</span>
+                <br>
+                <span class="alert">Love Strength {{matchCase}}</span>
+                <p>{{matchCaseMsg}}</p>
+            </div>
+            <!-- <div class="content2">
+                <i id="faIconM" class="fa fa-male "></i>
+                
+                    <button type="submit" id="btn1" ng-click="pos($event)" class="btn btn-outline-black">A</button>
+                    <button type="submit" id="btn2" ng-click="pos($event)" class="btn btn-outline-black">B</button>
+                    <button type="submit" id="btn3" ng-click="pos($event)" class="btn btn-outline-black">C</button>
+                    <button type="submit" id="btn4" ng-click="pos($event)" class="btn btn-outline-black">D</button>
+                    <button type="submit" id="btn5" ng-click="pos($event)" class="btn btn-outline-black">E</button>
+                    <button type="submit" id="btn6" ng-click="pos($event)" class="btn btn-outline-black">F</button>
+                    <i id="faIconF" class="fa fa-female "></i>
+                  <input type="button" ng-click="ani()" value="chck">
+                </div>
+        </div> -->
+      
+        <div class="ads">
+               <i class="fa fa-smile-o"  aria-hidden="true"></i>   
+            </div>
+        <div class="content2" ng-show="show2">
+                
+           
+           <button type="submit" class="btn btn-outline-black mr-1" ng-repeat="x in letters">{{x}}</button>
+          
+           <!-- <input class="btn" type="button" ng-click="ani()" value="chck"> -->
+        </div>
+      <div class="content3" ng-show="show3">
+            <!-- <i id="faIconM mr-3" class="fa fa-male"></i> -->
+            <i id="faIconF ml-3" class="fa fa-gift"></i>
+            <!-- <i id="faIconF ml-3" class="fa fa-female"></i> -->
+      </div>
+    </div>
+   
+</body>
+
+</html>

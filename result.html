@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="result.css">
+<div class="bgoverlay">
+        <div class="container">
+          <span class="ico">
+            <span class="ico2"></span>
+            <span ng-click="blast()" class="title">Click Me</span>
+          </span>
+          <div class="endtext">
+            <span class="close" ng-click="close()"  title="Restart"><i class="fa fa-times"></i></span>  
+            <h1>I love you baby</h1>
+            <h2>Be my valentine?</h2>
+            <h3>~Skippy</h3>
+          </div>
+        </div>
+      </div>    
+      <script>
+          $(document).ready(function(){
+  $('.title').click(function(){
+    $('.container').addClass('open');
+  });
+  
+  
+  $('.close').click(function(){
+    $('.container').removeClass('open');
+  });
+});
+    //     $scope.blast=function(){
+    //     angular.element(document.querySelector(".container")).addClass("open");
+    // }
+    // $scope.close=function(){
+    //     angular.element(document.querySelector(".container")).removeClass("open");
+    // }
+      </script>
